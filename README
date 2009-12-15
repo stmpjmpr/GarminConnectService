@@ -1,0 +1,4 @@
+GarminConnectService
+====================
+
+A Movable Type Action Stream service that allows for importing activity from a Garmin Connect account. It currently reports activities as bike rides, because that's how I use it. Feel free to change the description in config.yaml to be whatever floats your boat.
