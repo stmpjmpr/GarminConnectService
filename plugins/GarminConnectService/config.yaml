@@ -1,0 +1,27 @@
+id:   GarminConnectService
+key:  GarminConnectService
+name: Garmin Connect
+description: A Movable Type Action Stream service for Garmin Connect activities.
+version: 1.0
+author_name: Scott Hill
+author_link: http://www.scottwhill.com/blog
+plugin_link: http://github.com/stmpjmpr/GarminConnectService
+profile_services:
+    basic:
+        name: Garmin Connect
+        url: http://connect.garmin.com/explore?owner={{ident}}
+        ident_label: User ID
+        ident_hint: You can find your User ID on the dashboard in the welcome line.
+        ident_example: foo
+        service_type: events
+action_streams:
+    basic:
+        activities:
+            name: Garmin Connect Activites Service
+            description: Activites uploaded to Garmin Connect
+            html_form: '[_1] uploaded a ride: <a href="[_2]">[_3]</a>.'
+            html_params:
+                - url
+                - title
+            url: http://connect.garmin.com/feed/rss/activities?feedname=Garmin%20Connect%20-%20{{ident}}&owner={{ident}}
+            rss: 1
