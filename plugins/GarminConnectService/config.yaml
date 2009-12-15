@@ -14,6 +14,8 @@ profile_services:
         ident_hint: You can find your User ID on the dashboard in the welcome line.
         ident_example: foo
         service_type: events
+        icon: garmin.gif
+        
 action_streams:
     basic:
         activities:
